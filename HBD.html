@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday, Vinay</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom right, #fdf2f8, #e0f2fe, #fef3c7);
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Background balloons */
+    .balloon-bg {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .balloon {
+      position: absolute;
+      width: 60px;
+      height: 80px;
+      background: radial-gradient(circle at 30% 30%, #f87171, #ef4444);
+      border-radius: 50% 50% 45% 45%;
+      animation: floatBalloon 12s ease-in-out infinite;
+      opacity: 0.8;
+    }
+
+    .balloon::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      width: 2px;
+      height: 20px;
+      background: #555;
+      transform: translateX(-50%);
+    }
+
+    @keyframes floatBalloon {
+      0% { transform: translateY(100vh) rotate(0deg); }
+      100% { transform: translateY(-200px) rotate(10deg); }
+    }
+
+    /* Sparkle overlay */
+    .sparkles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: url('https://cdn.pixabay.com/photo/2021/07/13/12/37/sparkle-6464202_1280.png');
+      background-repeat: repeat;
+      background-size: contain;
+      opacity: 0.05;
+      z-index: -1;
+    }
+
+    .card {
+      max-width: 900px;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      border: 3px solid #ffedd5;
+      box-shadow: 0 0 30px rgba(255, 182, 193, 0.4);
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+    }
+
+    .intro {
+      background: linear-gradient(135deg, #fde68a, #fbcfe8);
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+      background-image: url('https://cdn.pixabay.com/photo/2016/03/31/15/35/balloons-1294996_960_720.png');
+      background-repeat: no-repeat;
+      background-size: 120px;
+      background-position: top right;
+      border-bottom: 3px dashed #f59e0b;
+    }
+
+    .intro h1 {
+      font-size: 3.2em;
+      margin: 0;
+      background: linear-gradient(90deg, #f43f5e, #f59e0b, #10b981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .intro h2 {
+      color: #7c3aed;
+      font-weight: 500;
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 1.15em;
+      margin: 1.5em 2em;
+      color: #374151;
+    }
+
+    .poem {
+      background: linear-gradient(to bottom right, #fff7ed, #fde68a);
+      border-left: 6px solid #f59e0b;
+      padding: 30px;
+      margin: 45px 2em;
+      font-style: italic;
+      white-space: pre-wrap;
+      color: #4b3b3b;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 200, 130, 0.3);
+    }
+
+    .footer {
+      margin: 50px 2em;
+      text-align: right;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #7c3aed;
+    }
+
+    .heart {
+      color: #e11d48;
+      font-size: 1.5em;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        margin: 20px;
+      }
+
+      .intro {
+        background-size: 80px;
+      }
+
+      .intro h1 {
+        font-size: 2.2em;
+      }
+
+      .poem {
+        font-size: 1em;
+        margin: 20px 1em;
+      }
+
+      p, .footer {
+        margin: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sparkles"></div>
+  <div class="balloon-bg">
+    <div class="balloon" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="balloon" style="left: 30%; animation-delay: 2s;"></div>
+    <div class="balloon" style="left: 50%; animation-delay: 4s;"></div>
+    <div class="balloon" style="left: 70%; animation-delay: 1s;"></div>
+    <div class="balloon" style="left: 85%; animation-delay: 3s;"></div>
+  </div>
+
+  <div class="card">
+    <div class="intro">
+      <h1>Happy Birthday, Vinay</h1>
+      <h2>From Your Sister, With Love</h2>
+    </div>
+
+    <p>Dear Vinay,</p>
+
+    <p>
+      Today is your birthday — a day to celebrate the person you are, and the journey we’ve shared.
+      Ours hasn’t been the most conventional story… we weren’t born under the same roof, yet somehow,
+      life decided we’d walk this path together.
+    </p>
+
+    <p>
+      We haven’t always seen eye to eye. We haven’t always understood each other perfectly.
+      But through every silence, every pause, and every effort — one truth remains steady:
+      <strong>you became my brother</strong>, not by chance, but through something deeper.
+    </p>
+
+    <p>
+      On your special day, I’m not giving you grand speeches or loud affection. Instead,
+      I’m giving you something more honest — a part of me in words. Words I’ve often kept quiet,
+      but feel right to offer now.
+    </p>
+
+    <div class="poem">
+<strong>"What You Don’t Always See"</strong><br><br>
+We weren’t born under the same roof,<br>
+But still, our bond became the proof<br>
+That sometimes life can gently tie<br>
+Two people close, without a why.<br>
+You weren’t my brother from the start —<br>
+But you grew into that space in my heart.<br><br>
+
+I know I’m not the loudest one,<br>
+I don’t show love like others have done.<br>
+But every effort, small or deep,<br>
+Is one I give, not one I keep.<br>
+I only try this hard, you see,<br>
+For those who truly matter to me.<br><br>
+
+And yes, I feel a quiet guilt,<br>
+For every gap we’ve ever built.<br>
+For times I wasn’t fully there,<br>
+For moments lost in missed-out care.<br>
+But don't mistake my guilt as fear,<br>
+Or think I’ll bow just to draw near.<br><br>
+
+I will not feed what isn’t right,<br>
+Or walk away from every fight.<br>
+I speak because I hope you’ll grow,<br>
+Not stay where ego makes you low.<br>
+What gain is mine in pushing back,<br>
+When all I want is what we lack?<br><br>
+
+I thought my words might change your view,<br>
+At least a little — a percent or two.<br>
+But you remind me, day by day,<br>
+That hearts don’t shift just when we say.<br><br>
+
+Still, I try — though I seem cold,<br>
+My care for you is quiet, bold.<br>
+I’m not expressive, that is true,<br>
+But silence doesn’t mean untrue.<br><br>
+
+I don’t explain myself to all,<br>
+But when I try, I give my all.<br>
+I hoped you’d see the love I send —<br>
+Not through loud words, but how I bend.<br><br>
+
+You hurt me sometimes, more than you see,<br>
+But I never walked away from "we."<br>
+You still mean more than you might know,<br>
+Even if I no longer show.<br><br>
+
+So no, I won’t obey what’s wrong —<br>
+But I’ll stay, and I’ll stand strong.<br>
+Because I care, and always will,<br>
+Even when we both sit still.<br><br>
+
+And though this path may shake or bother —<br>
+Through all of it,<br>
+I still call you my brother.
+    </div>
+
+    <p>
+      If I could give you one gift today, it wouldn’t be something you unwrap.  
+      It would be understanding.  
+      It would be knowing that, even in silence, you’ve always mattered.  
+      Even in distance, I’ve still cared.  
+      And even in disagreement, I’ve still stood by you — just not always in ways you expected.
+    </p>
+
+    <p>
+      Happy Birthday, Vinay.  
+      May this year bring you growth, healing, and moments that remind you:  
+      <strong>You are never unloved.</strong>  
+      You are still — and always — my brother.
+    </p>
+
+    <div class="footer">
+      With quiet strength and all my heart,<br>
+      Your Sister <span class="heart">❤️</span>
+    </div>
+  </div>
+</body>
+</html>
